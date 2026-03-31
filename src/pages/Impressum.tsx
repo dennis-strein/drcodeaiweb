@@ -30,6 +30,9 @@ export default function Impressum({ onBack }: ImpressumProps) {
               <span className="block">76137 Karlsruhe</span>
               <span className="block">Germany</span>
             </p>
+          </div>
+
+          <div>
             <p className="leading-relaxed space-y-1">
               <span className="block">Ust-ID DE344044261</span>
             </p>
