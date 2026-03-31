@@ -9,11 +9,15 @@ function App() {
 
   useEffect(() => {
     const path = window.location.pathname;
+    const searchParams = new URLSearchParams(window.location.search);
+
     if (path === '/privacy') {
       setCurrentPage('privacy');
     } else if (path === '/impressum') {
       setCurrentPage('impressum');
-    } else if (path === '/stylechatai') {
+    } else if (path === '/stylechatai' || path === '/style-chat-ai' || path === '/app/stylechatai') {
+      setCurrentPage('stylechatai');
+    } else if (searchParams.get('page') === 'stylechatai') {
       setCurrentPage('stylechatai');
     }
   }, []);
