@@ -13,6 +13,17 @@
     <!-- Deep Link Support -->
     <meta name="apple-itunes-app" content="app-id=APP_ID, app-argument=https://dr-code.ai/stylechatai">
     <link rel="alternate" href="android-app://com.stylechatai/https/dr-code.ai/stylechatai" />
+
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
