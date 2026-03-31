@@ -206,7 +206,6 @@ function App() {
           <p>&copy; 2026 dr-code.ai. All rights reserved.</p>
           <div className="mt-4 space-x-6">
             <button onClick={() => setCurrentPage('impressum')} className="text-gray-500 hover:text-black transition-colors">Impressum</button>
-            <button onClick={() => setCurrentPage('privacy')} className="text-gray-500 hover:text-black transition-colors">Privacy Policy</button>
           </div>
         </div>
       </footer>
