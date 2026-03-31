@@ -38,7 +38,7 @@ function App() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="flex-1 space-y-6">
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
-                Building the Future<br />with AI
+                Building the<br />Future with AI
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
                 We build innovative apps and tools powered by artificial intelligence.
