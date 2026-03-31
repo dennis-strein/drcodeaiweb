@@ -68,7 +68,7 @@ function App() {
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-4xl font-bold tracking-tight">Who We Are</h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We're a team passionate about AI and building great experiences. We create
+              We're passionate about AI and building great experiences. We create
               apps that make life easier, more fun, and more creative. Whether it's helping
               you find your style or solving everyday problems, we're here to experiment
               and innovate.
