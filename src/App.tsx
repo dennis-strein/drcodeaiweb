@@ -9,11 +9,15 @@ function App() {
 
   useEffect(() => {
     const path = window.location.pathname;
+    const searchParams = new URLSearchParams(window.location.search);
+
     if (path === '/privacy') {
       setCurrentPage('privacy');
     } else if (path === '/impressum') {
       setCurrentPage('impressum');
-    } else if (path === '/stylechatai') {
+    } else if (path === '/stylechatai' || path === '/style-chat-ai' || path === '/app/stylechatai') {
+      setCurrentPage('stylechatai');
+    } else if (searchParams.get('page') === 'stylechatai') {
       setCurrentPage('stylechatai');
     }
   }, []);
@@ -202,6 +206,7 @@ function App() {
           <p>&copy; 2026 dr-code.ai. All rights reserved.</p>
           <div className="mt-4 space-x-6">
             <button onClick={() => setCurrentPage('impressum')} className="text-gray-500 hover:text-black transition-colors">Impressum</button>
+            <button onClick={() => setCurrentPage('privacy')} className="text-gray-500 hover:text-black transition-colors">Privacy Policy</button>
           </div>
         </div>
       </footer>
