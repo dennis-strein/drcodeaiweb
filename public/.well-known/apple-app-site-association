@@ -4,7 +4,7 @@
     "details": [
       {
         "appID": "TEAM_ID.com.stylechatai",
-        "paths": ["/stylechatai", "/style-chat-ai", "/app/stylechatai"]
+        "paths": ["/stylechatai", "/style-chat-ai", "/app/stylechatai", "/delete-account", "/deleteaccount"]
       }
     ]
   }

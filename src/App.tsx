@@ -3,6 +3,7 @@ import { Brain, Sparkles, Zap, ArrowRight, Smartphone } from 'lucide-react';
 import Impressum from './pages/Impressum';
 import StyleChatAI from './pages/StyleChatAI';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import DeleteAccount from './pages/DeleteAccount';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -15,6 +16,8 @@ function App() {
       setCurrentPage('privacy');
     } else if (path === '/impressum') {
       setCurrentPage('impressum');
+    } else if (path === '/delete-account' || path === '/deleteaccount') {
+      setCurrentPage('deleteaccount');
     } else if (path === '/stylechatai' || path === '/style-chat-ai' || path === '/app/stylechatai') {
       setCurrentPage('stylechatai');
     } else if (searchParams.get('page') === 'stylechatai') {
@@ -27,6 +30,8 @@ function App() {
       window.history.pushState({}, '', '/privacy');
     } else if (currentPage === 'impressum') {
       window.history.pushState({}, '', '/impressum');
+    } else if (currentPage === 'deleteaccount') {
+      window.history.pushState({}, '', '/delete-account');
     } else if (currentPage === 'stylechatai') {
       window.history.pushState({}, '', '/stylechatai');
     } else {
@@ -42,6 +47,9 @@ function App() {
   }
   if (currentPage === 'privacy') {
     return <PrivacyPolicy onBack={() => setCurrentPage('home')} />;
+  }
+  if (currentPage === 'deleteaccount') {
+    return <DeleteAccount onBack={() => setCurrentPage('home')} />;
   }
 
   return (
