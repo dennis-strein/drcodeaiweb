@@ -75,7 +75,7 @@ export default function StyleChatAI({ onBack }: StyleChatAIProps) {
               </div>
 
               <a
-                href="https://play.google.com/store/apps/details?id=com.stylchatai"
+                href="https://play.google.com/store/apps/details?id=com.stylechatai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all group"
