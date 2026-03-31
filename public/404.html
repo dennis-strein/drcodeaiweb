@@ -9,10 +9,22 @@
         // Store the path and redirect to index.html
         var path = window.location.pathname;
 
-        // Only redirect if not already at root
-        if (path !== '/' && path !== '/index.html') {
-            sessionStorage.setItem('redirect', window.location.pathname + window.location.search + window.location.hash);
-            window.location.replace('/');
+        // Route to static HTML pages
+        if (path === '/delete-account' || path === '/deleteaccount') {
+            window.location.replace('/delete-account.html');
+        }
+        else if (path === '/privacy' || path === '/privacy-policy') {
+            window.location.replace('/privacy.html');
+        }
+        else if (path === '/impressum') {
+            window.location.replace('/impressum.html');
+        }
+        else if (path === '/stylechatai' || path === '/style-chat-ai') {
+            window.location.replace('/stylechatai.html');
+        }
+        // Redirect everything else to homepage
+        else if (path !== '/' && path !== '/index.html') {
+            window.location.replace('/index.html');
         }
     </script>
 </head>
