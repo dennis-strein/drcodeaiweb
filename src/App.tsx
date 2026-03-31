@@ -1,15 +1,43 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Brain, Sparkles, Zap, ArrowRight, Smartphone } from 'lucide-react';
 import Impressum from './pages/Impressum';
 import StyleChatAI from './pages/StyleChatAI';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path === '/privacy') {
+      setCurrentPage('privacy');
+    } else if (path === '/impressum') {
+      setCurrentPage('impressum');
+    } else if (path === '/stylechatai') {
+      setCurrentPage('stylechatai');
+    }
+  }, []);
+
+  useEffect(() => {
+    if (currentPage === 'privacy') {
+      window.history.pushState({}, '', '/privacy');
+    } else if (currentPage === 'impressum') {
+      window.history.pushState({}, '', '/impressum');
+    } else if (currentPage === 'stylechatai') {
+      window.history.pushState({}, '', '/stylechatai');
+    } else {
+      window.history.pushState({}, '', '/');
+    }
+  }, [currentPage]);
+
   if (currentPage === 'impressum') {
     return <Impressum onBack={() => setCurrentPage('home')} />;
   }
   if (currentPage === 'stylechatai') {
     return <StyleChatAI onBack={() => setCurrentPage('home')} />;
+  }
+  if (currentPage === 'privacy') {
+    return <PrivacyPolicy onBack={() => setCurrentPage('home')} />;
   }
 
   return (
@@ -174,6 +202,7 @@ function App() {
           <p>&copy; 2026 dr-code.ai. All rights reserved.</p>
           <div className="mt-4 space-x-6">
             <button onClick={() => setCurrentPage('impressum')} className="text-gray-500 hover:text-black transition-colors">Impressum</button>
+            <button onClick={() => setCurrentPage('privacy')} className="text-gray-500 hover:text-black transition-colors">Privacy Policy</button>
           </div>
         </div>
       </footer>
