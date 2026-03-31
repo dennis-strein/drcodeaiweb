@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Brain, Sparkles, Zap, ArrowRight } from 'lucide-react';
 import Impressum from './pages/Impressum';
-import Logo from './components/Logo';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -14,7 +13,11 @@ function App() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <Logo className="h-10 w-10" />
+            <img
+              src="/Gemini_Generated_Image_w24dy4w24dy4w24d.png"
+              alt="Dr. Code AI"
+              className="h-10 w-10"
+            />
             <span className="text-xl font-semibold tracking-tight">dr-code.ai</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm">
@@ -45,7 +48,11 @@ function App() {
               </a>
             </div>
             <div className="flex-1 flex justify-center">
-              <Logo className="w-64 h-64 md:w-80 md:h-80 animate-float" />
+              <img
+                src="/Gemini_Generated_Image_w24dy4w24dy4w24d.png"
+                alt="Dr. Code AI"
+                className="w-64 h-64 md:w-80 md:h-80 object-contain animate-float"
+              />
             </div>
           </div>
         </div>
