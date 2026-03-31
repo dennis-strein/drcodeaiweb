@@ -1,11 +1,15 @@
 import { useState } from 'react';
-import { Brain, Sparkles, Zap, ArrowRight } from 'lucide-react';
+import { Brain, Sparkles, Zap, ArrowRight, Smartphone } from 'lucide-react';
 import Impressum from './pages/Impressum';
+import StyleChatAI from './pages/StyleChatAI';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   if (currentPage === 'impressum') {
     return <Impressum onBack={() => setCurrentPage('home')} />;
+  }
+  if (currentPage === 'stylechatai') {
+    return <StyleChatAI onBack={() => setCurrentPage('home')} />;
   }
 
   return (
@@ -23,6 +27,7 @@ function App() {
           <div className="hidden md:flex gap-8 text-sm">
             <a href="#about" className="text-gray-600 hover:text-black transition-colors">About</a>
             <a href="#services" className="text-gray-600 hover:text-black transition-colors">Services</a>
+            <a href="#portfolio" className="text-gray-600 hover:text-black transition-colors">Portfolio</a>
             <a href="#contact" className="text-gray-600 hover:text-black transition-colors">Contact</a>
           </div>
         </div>
@@ -103,6 +108,44 @@ function App() {
               <p className="text-gray-600 leading-relaxed">
                 High-performance AI systems designed to scale with your business needs.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold tracking-tight text-center mb-4">Our Apps</h2>
+          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+            Innovative applications powered by artificial intelligence
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              onClick={() => setCurrentPage('stylechatai')}
+              className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-gray-400 transition-all cursor-pointer hover:shadow-lg"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <img
+                  src="/applogo.png"
+                  alt="Style Chat AI"
+                  className="w-16 h-16 rounded-2xl shadow-md group-hover:scale-105 transition-transform"
+                />
+                <div>
+                  <h3 className="text-xl font-semibold">Style Chat AI</h3>
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <Smartphone className="w-4 h-4" />
+                    <span>Android</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Finding your next-level style is as easy as a chat. AI-powered fashion recommendations tailored to your unique taste.
+              </p>
+              <div className="flex items-center text-sm font-medium text-black group-hover:gap-2 transition-all">
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
             </div>
           </div>
         </div>
