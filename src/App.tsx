@@ -127,7 +127,7 @@ function App() {
 
       <footer className="py-8 px-6 border-t border-gray-100">
         <div className="max-w-7xl mx-auto text-center text-sm text-gray-500">
-          <p>&copy; 2024 dr-code.ai. All rights reserved.</p>
+          <p>&copy; 2026 dr-code.ai. All rights reserved.</p>
           <div className="mt-4 space-x-6">
             <button onClick={() => setCurrentPage('impressum')} className="text-gray-500 hover:text-black transition-colors">Impressum</button>
           </div>
