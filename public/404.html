@@ -9,9 +9,12 @@
         // Store the path and redirect to index.html
         var path = window.location.pathname;
 
-        // Don't redirect delete-account page - it has its own static HTML
+        // Don't redirect static pages - they have their own HTML
         if (path === '/delete-account' || path === '/deleteaccount') {
             window.location.replace('/delete-account.html');
+        }
+        else if (path === '/privacy' || path === '/privacy-policy') {
+            window.location.replace('/privacy.html');
         }
         // Only redirect if not already at root
         else if (path !== '/' && path !== '/index.html') {
