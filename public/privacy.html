@@ -14,175 +14,183 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #ffffff;
+            background: #f9fafb;
         }
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 80px 20px 40px;
+            padding: 40px 20px;
         }
         .header {
-            margin-bottom: 48px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
         }
         h1 {
-            font-size: 40px;
-            font-weight: bold;
-            margin-bottom: 16px;
-            color: #000;
-            letter-spacing: -0.02em;
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+        .subtitle {
+            color: #6b7280;
+            font-size: 18px;
         }
         .last-updated {
             color: #6b7280;
-            font-size: 16px;
+            font-size: 14px;
+            margin-top: 8px;
         }
-        .intro {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 32px;
-            color: #333;
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         .section {
-            margin-bottom: 32px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
         h2 {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
-            margin-bottom: 16px;
-            color: #000;
+            margin-bottom: 12px;
+            color: #111;
         }
         p {
             color: #4b5563;
+            font-size: 16px;
             line-height: 1.7;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         a {
-            color: #000;
+            color: #111;
             font-weight: 500;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
-        .final-note {
-            padding-top: 32px;
-            border-top: 1px solid #e5e7eb;
-            margin-top: 32px;
-        }
-        footer {
-            padding: 32px 20px;
-            border-top: 1px solid #f3f4f6;
-            margin-top: 64px;
-            text-align: center;
-        }
-        footer p {
-            font-size: 14px;
-            color: #9ca3af;
-        }
         .back-link {
             display: inline-block;
             color: #6b7280;
             text-decoration: none;
-            margin-bottom: 32px;
-            font-size: 15px;
+            margin-top: 30px;
+            font-size: 14px;
         }
         .back-link:hover {
-            color: #000;
+            color: #111;
+        }
+        .final-note {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 16px 20px;
+            margin-top: 30px;
+            border-radius: 4px;
+        }
+        .final-note p {
+            color: #1e40af;
         }
         @media (max-width: 768px) {
             h1 {
-                font-size: 32px;
+                font-size: 28px;
             }
-            h2 {
-                font-size: 20px;
-            }
-            .container {
-                padding: 60px 20px 40px;
+            .content {
+                padding: 24px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="/" class="back-link">← Back</a>
-
         <div class="header">
+            <img src="/applogo.png" alt="Style Chat AI">
             <h1>Privacy Policy</h1>
+            <p class="subtitle">Style Chat AI</p>
             <p class="last-updated">Last updated: 3/28/2026</p>
         </div>
 
-        <p class="intro">
-            Style Chat AI ("we", "our", or "us") is committed to protecting your privacy.
-        </p>
+        <div class="content">
+            <div class="section">
+                <h2>1. Information We Collect</h2>
+                <p>
+                    We do not collect, store, or share any personal data or personally identifiable information.
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>1. Information We Collect</h2>
-            <p>
-                We do not collect, store, or share any personal data or personally identifiable information.
-            </p>
-        </div>
+            <div class="section">
+                <h2>2. Camera and Photos</h2>
+                <p>
+                    The app requests access to your device's camera to allow you to take photos.
+                </p>
+                <p>
+                    All photos are stored locally on your device. We do not collect, upload, or share your photos.
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>2. Camera and Photos</h2>
-            <p>
-                The app requests access to your device's camera to allow you to take photos.
-            </p>
-            <p>
-                All photos are stored locally on your device. We do not collect, upload, or share your photos.
-            </p>
-        </div>
+            <div class="section">
+                <h2>3. Permissions Used</h2>
+                <p>
+                    Camera – used only to take photos of the app
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>3. Permissions Used</h2>
-            <p>
-                Camera – used only to take photos of the app
-            </p>
-        </div>
+            <div class="section">
+                <h2>4. Data Sharing</h2>
+                <p>
+                    We do not share, sell, or disclose any user data to third parties.
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>4. Data Sharing</h2>
-            <p>
-                We do not share, sell, or disclose any user data to third parties.
-            </p>
-        </div>
+            <div class="section">
+                <h2>5. Data Security</h2>
+                <p>
+                    All data remains on your device under your control.
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>5. Data Security</h2>
-            <p>
-                All data remains on your device under your control.
-            </p>
-        </div>
+            <div class="section">
+                <h2>6. Children's Privacy</h2>
+                <p>
+                    This app does not knowingly collect personal information from children.
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>6. Children's Privacy</h2>
-            <p>
-                This app does not knowingly collect personal information from children.
-            </p>
-        </div>
+            <div class="section">
+                <h2>7. Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy. Changes will be posted on this page.
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>7. Changes to This Policy</h2>
-            <p>
-                We may update this Privacy Policy. Changes will be posted on this page.
-            </p>
-        </div>
+            <div class="section">
+                <h2>8. Contact</h2>
+                <p>
+                    Email: <a href="mailto:contact@dr-code.ai">contact@dr-code.ai</a>
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>8. Contact</h2>
-            <p>
-                Email: <a href="mailto:contact@dr-code.ai">contact@dr-code.ai</a>
-            </p>
-        </div>
+            <div class="final-note">
+                <p>
+                    By using this app, you agree to this Privacy Policy.
+                </p>
+            </div>
 
-        <div class="final-note">
-            <p>
-                By using this app, you agree to this Privacy Policy.
-            </p>
+            <a href="/" class="back-link">← Back to Homepage</a>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 dr-code.ai. All rights reserved.</p>
-    </footer>
 
     <noscript>
         <style>
