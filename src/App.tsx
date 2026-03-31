@@ -9,33 +9,41 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   useEffect(() => {
-    const path = window.location.pathname;
-    const searchParams = new URLSearchParams(window.location.search);
+    const handleNavigation = () => {
+      const path = window.location.pathname;
+      const searchParams = new URLSearchParams(window.location.search);
 
-    if (path === '/privacy') {
-      setCurrentPage('privacy');
-    } else if (path === '/impressum') {
-      setCurrentPage('impressum');
-    } else if (path === '/delete-account' || path === '/deleteaccount') {
-      setCurrentPage('deleteaccount');
-    } else if (path === '/stylechatai' || path === '/style-chat-ai' || path === '/app/stylechatai') {
-      setCurrentPage('stylechatai');
-    } else if (searchParams.get('page') === 'stylechatai') {
-      setCurrentPage('stylechatai');
-    }
+      if (path === '/privacy') {
+        setCurrentPage('privacy');
+      } else if (path === '/impressum') {
+        setCurrentPage('impressum');
+      } else if (path === '/delete-account' || path === '/deleteaccount') {
+        setCurrentPage('deleteaccount');
+      } else if (path === '/stylechatai' || path === '/style-chat-ai' || path === '/app/stylechatai') {
+        setCurrentPage('stylechatai');
+      } else if (searchParams.get('page') === 'stylechatai') {
+        setCurrentPage('stylechatai');
+      } else if (path === '/') {
+        setCurrentPage('home');
+      }
+    };
+
+    handleNavigation();
+
+    window.addEventListener('popstate', handleNavigation);
+    return () => window.removeEventListener('popstate', handleNavigation);
   }, []);
 
   useEffect(() => {
-    if (currentPage === 'privacy') {
-      window.history.pushState({}, '', '/privacy');
-    } else if (currentPage === 'impressum') {
-      window.history.pushState({}, '', '/impressum');
-    } else if (currentPage === 'deleteaccount') {
-      window.history.pushState({}, '', '/delete-account');
-    } else if (currentPage === 'stylechatai') {
-      window.history.pushState({}, '', '/stylechatai');
-    } else {
-      window.history.pushState({}, '', '/');
+    const path = window.location.pathname;
+    const targetPath =
+      currentPage === 'privacy' ? '/privacy' :
+      currentPage === 'impressum' ? '/impressum' :
+      currentPage === 'deleteaccount' ? '/delete-account' :
+      currentPage === 'stylechatai' ? '/stylechatai' : '/';
+
+    if (path !== targetPath) {
+      window.history.pushState({}, '', targetPath);
     }
   }, [currentPage]);
 
