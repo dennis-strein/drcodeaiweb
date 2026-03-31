@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes think {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-think-1 {
+    animation: think 1.4s ease-in-out infinite;
+    animation-delay: 0s;
+  }
+
+  .animate-think-2 {
+    animation: think 1.4s ease-in-out infinite;
+    animation-delay: 0.2s;
+  }
+
+  .animate-think-3 {
+    animation: think 1.4s ease-in-out infinite;
+    animation-delay: 0.4s;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
