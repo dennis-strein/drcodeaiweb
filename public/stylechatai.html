@@ -120,12 +120,26 @@
             pointer-events: none;
         }
 
-        .hero-app-icon {
-            width: 72px;
-            height: 72px;
-            border-radius: 18px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        .hero-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
             margin-bottom: 20px;
+        }
+
+        .hero-app-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+
+        .hero-brand-name {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--black);
         }
 
         .hero-badge {
@@ -158,7 +172,7 @@
         }
 
         .hero h1 {
-            font-size: clamp(36px, 5vw, 64px);
+            font-size: clamp(28px, 4vw, 48px);
             font-weight: 900;
             letter-spacing: -0.04em;
             line-height: 1.05;
@@ -356,7 +370,10 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-bg"></div>
-        <img src="/applogo.png" alt="Style Chat AI" class="hero-app-icon">
+        <div class="hero-brand">
+            <img src="/applogo.png" alt="Style Chat AI" class="hero-app-icon">
+            <span class="hero-brand-name">Style Chat AI</span>
+        </div>
         <h1>Your Style,<span class="gradient-text">Elevated.</span></h1>
         <p class="hero-sub">Meet your personal AI stylist. Chat naturally, get curated outfit ideas, and discover looks that are unmistakably you.</p>
         <div class="hero-actions">
