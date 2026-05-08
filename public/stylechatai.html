@@ -316,10 +316,40 @@
             margin-right: auto;
         }
 
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--gray-200);
+            padding: 32px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copy {
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--gray-400); }
 
         @media (max-width: 640px) {
             nav { padding: 16px 20px; }
             .nav-cta { display: none; }
+            footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
             .cta-inner { padding: 48px 24px; }
             .graphic-item img { height: 260px; }
         }
@@ -376,6 +406,15 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <span class="footer-copy">&copy; 2026 dr-code.ai. All rights reserved.</span>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/impressum.html">Impressum</a>
+            <a href="/delete-account.html">Delete Account</a>
+        </div>
+    </footer>
 
 </body>
 </html>
