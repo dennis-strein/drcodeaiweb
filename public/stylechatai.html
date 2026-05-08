@@ -122,24 +122,26 @@
 
         .hero-brand {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 14px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-bottom: 16px;
         }
 
         .hero-app-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 16px;
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
             box-shadow: 0 6px 24px rgba(0,0,0,0.15);
             flex-shrink: 0;
         }
 
         .hero-brand-name {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: -0.03em;
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 900;
+            letter-spacing: -0.04em;
             color: var(--black);
+            line-height: 1;
         }
 
         .hero-badge {
@@ -172,12 +174,14 @@
         }
 
         .hero h1 {
-            font-size: clamp(28px, 4vw, 48px);
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            line-height: 1.05;
-            margin-bottom: 16px;
+            font-size: clamp(14px, 1.6vw, 18px);
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            line-height: 1.2;
+            margin-bottom: 20px;
             max-width: 700px;
+            text-transform: uppercase;
+            color: var(--gray-400);
         }
 
         .hero h1 .gradient-text {
@@ -373,8 +377,8 @@
         <div class="hero-brand">
             <img src="/applogo.png" alt="Style Chat AI" class="hero-app-icon">
             <span class="hero-brand-name">Style Chat AI</span>
+            <h1>Your Style, <span class="gradient-text">Elevated.</span></h1>
         </div>
-        <h1>Your Style, <span class="gradient-text">Elevated.</span></h1>
         <p class="hero-sub">Meet your personal AI stylist. Chat naturally, get curated outfit ideas, and discover looks that are unmistakably you.</p>
         <div class="hero-actions">
             <a href="https://play.google.com/store/apps/details?id=com.stylechatai" target="_blank" rel="noopener noreferrer" class="btn-primary">
