@@ -122,10 +122,17 @@
 
         .hero-brand {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            gap: 10px;
+            gap: 18px;
             margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .hero-brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
 
         .hero-app-icon {
@@ -376,8 +383,10 @@
         <div class="hero-bg"></div>
         <div class="hero-brand">
             <img src="/applogo.png" alt="Style Chat AI" class="hero-app-icon">
-            <span class="hero-brand-name">Style Chat AI</span>
-            <h1>Your Style, <span class="gradient-text">Elevated.</span></h1>
+            <div class="hero-brand-text">
+                <span class="hero-brand-name">Style Chat AI</span>
+                <h1>Your Style, <span class="gradient-text">Elevated.</span></h1>
+            </div>
         </div>
         <p class="hero-sub">Meet your personal AI stylist. Chat naturally, get curated outfit ideas, and discover looks that are unmistakably you.</p>
         <div class="hero-actions">
