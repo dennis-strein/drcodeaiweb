@@ -271,6 +271,34 @@
             font-weight: 500;
             color: #000;
         }
+        .app-card-coming-soon {
+            cursor: default;
+            border-style: dashed;
+            background: #fafafa;
+        }
+        .app-card-coming-soon:hover {
+            border-color: #d1d5db;
+            box-shadow: none;
+        }
+        .app-logo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f3f4f6;
+            color: #9ca3af;
+            box-shadow: none;
+        }
+        .coming-soon-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #f3f4f6;
+            color: #6b7280;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 100px;
+            letter-spacing: 0.03em;
+        }
         .contact-center {
             text-align: center;
         }
@@ -515,6 +543,26 @@
                     </p>
                     <div class="learn-more">Learn More →</div>
                 </a>
+                <div class="app-card app-card-coming-soon">
+                    <div class="app-header">
+                        <div class="app-logo app-logo-placeholder">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <div class="app-title">
+                            <h3>More to come...</h3>
+                            <div class="app-platform coming-soon-badge">
+                                <span>Coming Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="app-description">
+                        We're working on something new. Stay tuned for more AI-powered apps from dr-code.ai.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
